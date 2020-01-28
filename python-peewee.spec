@@ -16,7 +16,7 @@ BuildRequires:  python3dist(setuptools)
 BuildRequires:  python3dist(sphinx)
 BuildRequires:	pkgconfig(sqlite3)
 # for tests
-BuildRequires:	python3dist(apsw)
+#BuildRequires:	python3dist(apsw)
 BuildRequires:	python3dist(psycopg2)
 #BuildRequires:	python3dist(sqlcipher3)
 
