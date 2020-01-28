@@ -36,20 +36,17 @@ rm -rf %{pypi_name}.egg-info
 %py_build
 
 # generate html docs
-PYTHONPATH=${PWD} sphinx-build-3 docs html
+#PYTHONPATH=${PWD} sphinx-build-3 docs html
 # remove the sphinx-build leftovers
-rm -rf html/.{doctrees,buildinfo}
+#rm -rf html/.{doctrees,buildinfo}
 
 %install
 %py_install
 
-%check
-%{__python} setup.py test
-
 %files
 %license LICENSE
 %doc README.rst playhouse/README.md
-%doc html
+#doc html
 %{_bindir}/pwiz.py
 %{python_sitearch}/__pycache__/*
 %{python_sitearch}/%{pypi_name}.py
