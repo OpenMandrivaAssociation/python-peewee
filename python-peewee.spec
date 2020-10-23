@@ -1,9 +1,11 @@
+%global debug_package %{nil}
+
 # Created by pyp2rpm-3.3.3
 %global pypi_name peewee
 
 Name:           python-%{pypi_name}
 Version:        3.13.3
-Release:        1
+Release:        2
 Summary:        a little orm
 Group:          Development/Python
 License:        MIT License
