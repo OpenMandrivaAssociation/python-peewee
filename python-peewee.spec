@@ -1,5 +1,3 @@
-%global debug_package %{nil}
-
 # Created by pyp2rpm-3.3.3
 %global pypi_name peewee
 
