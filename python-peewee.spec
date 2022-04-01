@@ -2,8 +2,8 @@
 %global pypi_name peewee
 
 Name:           python-%{pypi_name}
-Version:        3.14.8
-Release:        2
+Version:        3.14.10
+Release:        1
 Summary:        a little orm
 Group:          Development/Python
 License:        MIT License
