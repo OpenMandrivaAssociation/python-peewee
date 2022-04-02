@@ -15,7 +15,7 @@ BuildRequires:  python3dist(flask)
 BuildRequires:  python3dist(setuptools)
 BuildRequires:  python3dist(sphinx)
 BuildRequires:	pkgconfig(sqlite3)
-BuildRequires:  pytrhon3dist(cython)
+BuildRequires:  python3dist(cython)
 # for tests
 #BuildRequires:	python3dist(apsw)
 BuildRequires:	python3dist(psycopg2)
