@@ -1,3 +1,4 @@
+%define _empty_manifest_terminate_build 0
 # Created by pyp2rpm-3.3.3
 %global pypi_name peewee
 
