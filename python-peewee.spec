@@ -2,8 +2,8 @@
 %global pypi_name peewee
 
 Name:           python-%{pypi_name}
-Version:        3.14.8
-Release:        2
+Version:        3.14.10
+Release:        1
 Summary:        a little orm
 Group:          Development/Python
 License:        MIT License
@@ -15,6 +15,7 @@ BuildRequires:  python3dist(flask)
 BuildRequires:  python3dist(setuptools)
 BuildRequires:  python3dist(sphinx)
 BuildRequires:	pkgconfig(sqlite3)
+BuildRequires:  python3dist(cython)
 # for tests
 #BuildRequires:	python3dist(apsw)
 BuildRequires:	python3dist(psycopg2)
@@ -48,7 +49,6 @@ rm -rf %{pypi_name}.egg-info
 %doc README.rst playhouse/README.md
 #doc html
 %{_bindir}/pwiz.py
-%{python_sitearch}/__pycache__/*
 %{python_sitearch}/%{pypi_name}.py
 %{python_sitearch}/pwiz.py
 %{python_sitearch}/playhouse
