@@ -3,7 +3,7 @@
 %global pypi_name peewee
 
 Name:           python-%{pypi_name}
-Version:        3.15.3
+Version:        3.15.4
 Release:        1
 Summary:        a little orm
 Group:          Development/Python
