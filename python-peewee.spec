@@ -4,7 +4,7 @@
 
 Name:           python-%{pypi_name}
 Version:        3.15.4
-Release:        2
+Release:        3
 Summary:        a little orm
 Group:          Development/Python
 License:        MIT License
