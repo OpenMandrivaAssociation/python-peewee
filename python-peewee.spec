@@ -3,8 +3,8 @@
 %global pypi_name peewee
 
 Name:           python-%{pypi_name}
-Version:        3.15.4
-Release:        3
+Version:        3.18.3
+Release:        1
 Summary:        a little orm
 Group:          Development/Python
 License:        MIT License
@@ -12,14 +12,15 @@ URL:            https://github.com/coleifer/peewee/
 Source0:        https://files.pythonhosted.org/packages/source/p/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
 #Patch0:		peewee-linking.patch
 BuildRequires:  python-devel
-BuildRequires:  python3dist(flask)
-BuildRequires:  python3dist(setuptools)
-BuildRequires:  python3dist(sphinx)
+BuildRequires:  python%{pyver}dist(pip)
+BuildRequires:  python%{pyver}dist(flask)
+BuildRequires:  python%{pyver}dist(setuptools)
+BuildRequires:  python%{pyver}dist(sphinx)
 BuildRequires:	pkgconfig(sqlite3)
-BuildRequires:  python3dist(cython)
+BuildRequires:  python%{pyver}dist(cython)
 # for tests
 #BuildRequires:	python3dist(apsw)
-BuildRequires:	python3dist(psycopg2)
+BuildRequires:	python%{pyver}dist(psycopg2)
 #BuildRequires:	python3dist(sqlcipher3)
 
 %{?python_provide:%python_provide python-%{pypi_name}}
@@ -50,7 +51,10 @@ rm -rf %{pypi_name}.egg-info
 %doc README.rst playhouse/README.md
 #doc html
 %{_bindir}/pwiz.py
+%{_bindir}/__pycache__/pwiz.cpython-*.pyc
 %{python_sitearch}/%{pypi_name}.py
 %{python_sitearch}/pwiz.py
 %{python_sitearch}/playhouse
-%{python_sitearch}/%{pypi_name}-%{version}-py%{python3_version}.egg-info
+%{python_sitearch}/%{pypi_name}*.dist-info
+%{python_sitearch}/__pycache__/peewee.cpython-*.pyc
+%{python_sitearch}/__pycache__/pwiz.cpython-*.pyc
