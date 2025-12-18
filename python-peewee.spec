@@ -51,7 +51,10 @@ rm -rf %{pypi_name}.egg-info
 %doc README.rst playhouse/README.md
 #doc html
 %{_bindir}/pwiz.py
+%{_bindir}/__pycache__/pwiz.cpython-*.pyc
 %{python_sitearch}/%{pypi_name}.py
 %{python_sitearch}/pwiz.py
 %{python_sitearch}/playhouse
 %{python_sitearch}/%{pypi_name}*.dist-info
+%{python_sitearch}/__pycache__/peewee.cpython-*.pyc
+%{python_sitearch}/__pycache__/pwiz.cpython-*.pyc
