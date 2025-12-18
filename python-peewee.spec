@@ -54,4 +54,4 @@ rm -rf %{pypi_name}.egg-info
 %{python_sitearch}/%{pypi_name}.py
 %{python_sitearch}/pwiz.py
 %{python_sitearch}/playhouse
-%{python_sitearch}/%{pypi_name}-%{version}-py%{python3_version}.egg-info
+%{python_sitearch}/%{pypi_name}*.dist-info
