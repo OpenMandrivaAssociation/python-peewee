@@ -3,7 +3,7 @@
 %global pypi_name peewee
 
 Name:           python-%{pypi_name}
-Version:        3.18.3
+Version:        4.2.6
 Release:        1
 Summary:        a little orm
 Group:          Development/Python
@@ -30,7 +30,7 @@ Peewee is a simple and small ORM. It has few (but expressive) concepts, making
 it easy to learn and intuitive to use.
 
 %prep
-%autosetup -n %{pypi_name}-%{version} -p1
+%autosetup -n peewee-4.2.6 -p1
 
 # Remove bundled egg-info
 rm -rf %{pypi_name}.egg-info
