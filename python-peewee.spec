@@ -3,7 +3,7 @@
 %global pypi_name peewee
 
 Name:           python-%{pypi_name}
-Version:        4.2.6
+Version:        4.5.3
 Release:        1
 Summary:        a little orm
 Group:          Development/Python
@@ -11,8 +11,9 @@ License:        MIT License
 URL:            https://github.com/coleifer/peewee/
 Source0:        https://files.pythonhosted.org/packages/source/p/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
 #Patch0:		peewee-linking.patch
-BuildRequires:  python-devel
-BuildRequires:  python%{pyver}dist(pip)
+BuildRequires:	pkgconfig(python3)
+BuildRequires:	python%{pyver}dist(pip)
+BuildRequires:	python%{pyver}dist(wheel)
 BuildRequires:  python%{pyver}dist(flask)
 BuildRequires:  python%{pyver}dist(setuptools)
 BuildRequires:  python%{pyver}dist(sphinx)
@@ -30,7 +31,7 @@ Peewee is a simple and small ORM. It has few (but expressive) concepts, making
 it easy to learn and intuitive to use.
 
 %prep
-%autosetup -n peewee-4.2.6 -p1
+%autosetup -n peewee-%{version} -p1
 
 # Remove bundled egg-info
 rm -rf %{pypi_name}.egg-info
@@ -50,11 +51,12 @@ rm -rf %{pypi_name}.egg-info
 %license LICENSE
 %doc README.rst playhouse/README.md
 #doc html
-%{_bindir}/pwiz.py
-%{_bindir}/__pycache__/pwiz.cpython-*.pyc
+%{_bindir}/pwiz
+%{_bindir}/pwmigrate
 %{python_sitearch}/%{pypi_name}.py
 %{python_sitearch}/pwiz.py
 %{python_sitearch}/playhouse
+%{python_sitearch}/peewee-stubs
 %{python_sitearch}/%{pypi_name}*.dist-info
 %{python_sitearch}/__pycache__/peewee.cpython-*.pyc
 %{python_sitearch}/__pycache__/pwiz.cpython-*.pyc
